@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Student Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      /* Fade in animation */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Glow pulse animation for profile image */
+      @keyframes glowPulse {
+        0%, 100% {
+          box-shadow: 0 0 15px #22d3ee80, 0 0 25px #22d3ee40;
+        }
+        50% {
+          box-shadow: 0 0 30px #22d3eea0, 0 0 50px #22d3ee70;
+        }
+      }
+
+      /* Floating animation (gentle up and down) */
+      @keyframes floatUpDown {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out;
+      }
+
+      .animate-glow {
+        animation: glowPulse 2.5s ease-in-out infinite;
+      }
+
+      .animate-float {
+        animation: floatUpDown 4s ease-in-out infinite;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-900 flex items-center justify-center min-h-screen p-4">
+    <div
+      class="bg-gray-800 shadow-lg rounded-2xl p-6 w-full max-w-sm md:max-w-md lg:max-w-lg text-center text-gray-100 transition-transform duration-300 hover:scale-105 animate-fadeIn"
+    >
+      <!-- Profile Image -->
+      <img
+        src="https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/542843492_1496095901807481_3760602353090461191_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGu9S-D8LJGCQ2lDZCHMTd87XRSIVgAT2rtdFIhWABPaj0JE-OuzFslV6zSG7fgsdQPhWtKeg5ip895I2TxslhY&_nc_ohc=ohUWr0exNLgQ7kNvwFicFfy&_nc_oc=Adk60qgAi7G2l7bPdj_OtQilaMdV3VeRU1MrxBeJkoaFcSIfHloBsGORpUZAFGyljHRMErVgpyAdfuWrOdbMBndz&_nc_zt=23&_nc_ht=scontent.fdvo2-1.fna&_nc_gid=B5R6ypALWzggKqBepimhnA&oh=00_AfeSsUXv6ZFjfBgSUSaJYjTdxIcdWF9QfA-ZdTf0-hqOEw&oe=68FC1452"
+        alt="Profile Picture"
+        class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400 shadow-cyan-400/50 shadow-md object-cover animate-glow animate-float"
+      />
+
+      <!-- Name and Bio -->
+      <h2 class="text-2xl font-semibold text-cyan-400">
+        Licdan, Stephen Carl M.
+      </h2>
+      <p class="text-gray-300 mt-2 text-sm md:text-base px-3">
+        An IT student who loves coding and creating simple web and mobile
+        projects using modern tools.
+      </p>
+
+      <!-- Social Media Buttons -->
+      <div class="flex justify-center mt-6 space-x-6">
+        <a
+          href="https://www.facebook.com/poyetzniel.licdan"
+          target="_blank"
+          class="text-blue-500 hover:text-blue-300 transition-colors duration-200 flex items-center space-x-1 transform hover:scale-110 hover:-translate-y-1"
+        >
+          <i class="fab fa-facebook-f"></i
+          ><span class="hidden md:inline">Facebook</span>
+        </a>
+        <a
+          href="https://www.instagram.com/itsmepoyti"
+          target="_blank"
+          class="text-pink-500 hover:text-pink-300 transition-colors duration-200 flex items-center space-x-1 transform hover:scale-110 hover:-translate-y-1"
+        >
+          <i class="fab fa-instagram"></i
+          ><span class="hidden md:inline">Instagram</span>
+        </a>
+        <a
+          href="https://github.com/stephencarllicdan?tab=repositories"
+          target="_blank"
+          class="text-cyan-400 hover:text-cyan-200 transition-colors duration-200 flex items-center space-x-1 transform hover:scale-110 hover:-translate-y-1"
+        >
+          <i class="fab fa-github"></i
+          ><span class="hidden md:inline">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
